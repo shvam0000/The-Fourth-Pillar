@@ -11,24 +11,24 @@ const IMFellGreatPrimerSC = IM_Fell_Great_Primer_SC({
 export const Hero = () => {
   return (
     <div className={`${IMFellGreatPrimerSC.className}`}>
-      <figure className="flex justify-center items-center pb-5 pt-10">
+      <figure className="flex justify-center items-center">
         <Image
           height={500}
-          width={700}
+          width={600}
           src={Banner}
           alt="banner"
           className="bg-blend-darken"
         />
       </figure>
-      <h1 className="flex justify-center items-center text-4xl text-tfp-gold-100 font-medium">
+      <h1 className="flex justify-center items-center text-5xl text-tfp-gold-100 font-medium">
         Empowering Uttrakhand
       </h1>
-      <div className="flex justify-center items-center py-10">
-        <h2 className="text-xl font-medium text-tfp-gold-100 mx-4">Seek</h2>
-        <h2>|</h2>
-        <h2 className="text-xl font-medium text-tfp-gold-100 mx-4">Solve</h2>
-        <h2>|</h2>
-        <h2 className="text-xl font-medium text-tfp-gold-100 mx-4">Sustain</h2>
+      <div className="flex justify-center items-center py-5">
+        <h2 className="text-2xl font-medium text-tfp-gold-100 mx-4">Seek</h2>
+        <h2 className="text-tfp-white-100 text-xl">|</h2>
+        <h2 className="text-2xl font-medium text-tfp-gold-100 mx-4">Solve</h2>
+        <h2 className="text-tfp-white-100 text-xl">|</h2>
+        <h2 className="text-2xl font-medium text-tfp-gold-100 mx-4">Sustain</h2>
       </div>
     </div>
   );

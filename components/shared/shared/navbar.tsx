@@ -29,7 +29,7 @@ const Navbar = () => {
         <div className="hidden md:flex justify-center items-center ">
           <Link
             href="/"
-            className="mx-4 text-xl text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300">
+            className="mx-4 text-2xl text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300">
             Natives of UK
           </Link>
           {/* About */}
@@ -39,7 +39,7 @@ const Navbar = () => {
             onMouseLeave={handleMouseLeave}>
             <Link
               href="#"
-              className="mx-4 text-xl text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 rounded-lg">
+              className="mx-4 text-2xl text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 rounded-lg">
               UK Today
             </Link>
             {isOpen && (
@@ -64,27 +64,27 @@ const Navbar = () => {
           </div>
           {/* End of modified "About" dropdown section */}
           <Link
-            className="text-tfp-white-100 text-xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
+            className="text-tfp-white-100 text-2xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
             href="/contact">
             Services
           </Link>
           <Link
-            className="text-tfp-white-100 text-xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
+            className="text-tfp-white-100 text-2xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
             href="/contact">
             Logo
           </Link>
           <Link
-            className="text-tfp-white-100 text-xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
+            className="text-tfp-white-100 text-2xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
             href="/about">
             About Us
           </Link>
           <Link
-            className="text-tfp-white-100 text-xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
+            className="text-tfp-white-100 text-2xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
             href="/contact">
             Voice of 4th
           </Link>
           <Link
-            className="text-tfp-white-100 text-xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
+            className="text-tfp-white-100 text-2xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
             href="/contact">
             Careers
           </Link>
