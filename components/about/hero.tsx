@@ -23,7 +23,7 @@ const AboutHero = () => {
       </h1>
       <div
         className={`${IMFellGreatPrimer.className} flex justify-center items-center pb-5 text-4xl text-tfp-white-100`}>
-        We're a Distributed Team
+        We&apos;re a Distributed Team
       </div>
       <figure className="flex justify-center items-center">
         <World />
