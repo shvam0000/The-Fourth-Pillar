@@ -1,10 +1,12 @@
-import { Html, Head, Main, NextScript } from "next/document";
+import { Navbar } from '@/components/shared/shared';
+import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
   return (
     <Html lang="en">
+      <Navbar />
       <Head />
-      <body>
+      <body className="bg-tfp-blue-100">
         <Main />
         <NextScript />
       </body>

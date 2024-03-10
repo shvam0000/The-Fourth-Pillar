@@ -17,6 +17,8 @@ const config: Config = {
         'tfp-blue-100': '#1A3748',
         'tfp-blue-200': '#22303C',
         'tfp-gold-100': '#C39455',
+        'tfp-gold-200': '#A27C37',
+        'tfp-gold-300': '#D59C1F',
         'tfp-white-100': '#F5F5F5',
       },
     },
