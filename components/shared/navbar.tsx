@@ -37,11 +37,11 @@ const Navbar = () => {
             className="relative"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}>
-            <Link
+            <a
               href="#"
               className="mx-4 text-2xl text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 rounded-lg">
               UK Today
-            </Link>
+            </a>
             {isOpen && (
               <div className="absolute bg-tfp-blue-200 backdrop-blur-lg p-2 pl-4 px-5 rounded-md w-full mx-auto right-0 left-0 top-full">
                 <Link

@@ -1,4 +1,4 @@
-import { Navbar } from '@/components/shared/shared';
+import { Navbar } from '@/components/shared';
 import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {

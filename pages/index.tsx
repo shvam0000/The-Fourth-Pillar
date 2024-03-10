@@ -1,5 +1,5 @@
-import Hero from '@/components/shared/home/hero';
-import { Navbar } from '@/components/shared/shared';
+import Hero from '@/components/home/hero';
+import { Navbar } from '@/components/shared';
 
 export default function Home() {
   return (
