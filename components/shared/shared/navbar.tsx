@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
-import { Lora } from 'next/font/google';
+import { IM_Fell_Great_Primer_SC } from 'next/font/google';
 
-const lora = Lora({ subsets: ['latin'] });
+const IMFellGreatPrimerSC = IM_Fell_Great_Primer_SC({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,8 +23,8 @@ const Navbar = () => {
   };
 
   return (
-    <div>
-      <nav className={`${lora.className}  p-4`}>
+    <div className={`${IMFellGreatPrimerSC.className}`}>
+      <nav className="p-4">
         <div className="hidden md:flex justify-center items-center ">
           <a
             href="/"

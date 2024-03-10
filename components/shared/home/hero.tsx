@@ -1,10 +1,16 @@
 import React from 'react';
 import Banner from '@/utils/images/banner.png';
 import Image from 'next/image';
+import { IM_Fell_Great_Primer_SC } from 'next/font/google';
+
+const IMFellGreatPrimerSC = IM_Fell_Great_Primer_SC({
+  weight: '400',
+  subsets: ['latin'],
+});
 
 export const Hero = () => {
   return (
-    <div>
+    <div className={`${IMFellGreatPrimerSC.className}`}>
       <figure className="flex justify-center items-center pb-5 pt-10">
         <Image
           height={500}
