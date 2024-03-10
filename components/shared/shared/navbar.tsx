@@ -25,9 +25,9 @@ const Navbar = () => {
           <a
             href="/"
             className="mx-4 text-xl text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-100">
-            Home
+            Natives of UK
           </a>
-          {/* About Dropdown */}
+          {/* About */}
           <div
             className="relative"
             onMouseEnter={handleMouseEnter}
@@ -35,10 +35,10 @@ const Navbar = () => {
             <a
               href="#"
               className="mx-4 text-xl text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-100 rounded-lg">
-              About
+              UK Today
             </a>
             {isOpen && (
-              <div className="absolute bg-transparent backdrop-blur-lg p-2 shadow-md rounded-md w-full mx-auto right-0 left-0 top-full">
+              <div className="absolute bg-tfp-blue-200 backdrop-blur-lg p-2 pl-4 px-5 rounded-md w-full mx-auto right-0 left-0 top-full">
                 <a
                   href="/about"
                   className="block mb-2 text-md text-tfp-black-100 transition-colors duration-300 ease-in-out text-tfp-white-100 hover:text-tfp-gold-100">
@@ -61,7 +61,27 @@ const Navbar = () => {
           <a
             className="text-tfp-white-100 text-xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-100"
             href="/contact">
-            Contact
+            Services
+          </a>
+          <a
+            className="text-tfp-white-100 text-xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-100"
+            href="/contact">
+            Logo
+          </a>
+          <a
+            className="text-tfp-white-100 text-xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-100"
+            href="/contact">
+            About Us
+          </a>
+          <a
+            className="text-tfp-white-100 text-xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-100"
+            href="/contact">
+            Voice of 4th
+          </a>
+          <a
+            className="text-tfp-white-100 text-xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-100"
+            href="/contact">
+            Careers
           </a>
         </div>
         <div>
