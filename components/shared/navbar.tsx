@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { UKToday, Services, VoiceOf4th } from '@/utils/const';
 import Logo from '@/utils/images/logo.png';
 import Image from 'next/image';
+import { Menu } from '@/utils/icons';
 
 const IMFellGreatPrimerSC = IM_Fell_Great_Primer_SC({
   weight: '400',
@@ -39,7 +40,7 @@ const Navbar = () => {
         <div className="hidden md:flex justify-center items-center ">
           <Link
             href="/nativesofuk"
-            className="mx-4 text-2xl text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300">
+            className="mx-4 text-sm text-justify lg:text-2xl text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300">
             Natives of UK
           </Link>
           {/* About */}
@@ -49,7 +50,7 @@ const Navbar = () => {
             onMouseLeave={toggleUKTodayMenu}>
             <Link
               href="/uktoday"
-              className="mx-4 text-2xl text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 rounded-lg">
+              className="mx-4 text-sm text-justify lg:text-2xl text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 rounded-lg">
               UK Today
             </Link>
             {isOpenUKToday && (
@@ -73,7 +74,7 @@ const Navbar = () => {
             onMouseLeave={toggleServicesMenu}>
             <Link
               href="/services"
-              className="mx-4 text-2xl text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 rounded-lg">
+              className="mx-4 text-sm text-justify lg:text-2xl text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 rounded-lg">
               Services
             </Link>
             {isOpenServices && (
@@ -91,14 +92,14 @@ const Navbar = () => {
           </div>
           {/* End of "Services" section */}
           <Link
-            className="text-tfp-white-100 text-2xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
+            className="text-tfp-white-100 text-sm text-justify lg:text-2xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
             href="/">
             <figure>
               <Image src={Logo} alt="The Fourth Perspective" />
             </figure>
           </Link>
           <Link
-            className="text-tfp-white-100 text-2xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
+            className="text-tfp-white-100 text-sm text-justify lg:text-2xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
             href="/about">
             About Us
           </Link>
@@ -109,7 +110,7 @@ const Navbar = () => {
             onMouseLeave={toggleVoiceOf4thMenu}>
             <Link
               href="/voice-of-fourth"
-              className="mx-4 text-2xl text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 rounded-lg">
+              className="mx-4 text-sm text-justify lg:text-2xl text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 rounded-lg">
               Voice of 4th
             </Link>
             {isOpenVoiceOf4th && (
@@ -127,35 +128,67 @@ const Navbar = () => {
           </div>
           {/* End of modified "About" dropdown section */}
           <Link
-            className="text-tfp-white-100 text-2xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
+            className="text-tfp-white-100 text-sm text-justify lg:text-2xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
             href="/careers">
             Careers
           </Link>
           <Link
-            className="text-tfp-white-100 text-2xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
+            className="text-tfp-white-100 text-sm text-justify lg:text-2xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
             href="/contact-us">
             Contact
           </Link>
         </div>
-        <div>
-          <button onClick={toggleMenu} className="block md:hidden">
-            Menu
-          </button>
+        <div className="md:hidden">
+          <div className="flex">
+            <button
+              onClick={toggleMenu}
+              className="block text-3xl text-tfp-gold-100 font-bold">
+              <Menu />
+            </button>
+            <Link href="/" className="mx-10">
+              <Image
+                src={Logo}
+                alt="The Fourth Pillar"
+                height={200}
+                width={240}
+              />
+            </Link>
+          </div>
           {isOpen && (
-            <div className="md:hidden">
+            <div className="md:hidden py-2">
               <Link
-                href="/"
-                className="block mb-2 text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300">
-                Home
+                href="/nativesofuk"
+                className="block mb-2 text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
+                Natives of UK
+              </Link>
+              <Link
+                href="/uktoday"
+                className="block mb-2 text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
+                UK Today
+              </Link>
+              <Link
+                href="/services"
+                className="block text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
+                Services
               </Link>
               <Link
                 href="/about"
-                className="block mb-2 text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300">
-                About
+                className="block text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
+                About Us
               </Link>
               <Link
-                href="/contact"
-                className="block text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300">
+                href="/voice-of-fourth"
+                className="block text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
+                Voice of 4th
+              </Link>
+              <Link
+                href="/careers"
+                className="block text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
+                Careers
+              </Link>
+              <Link
+                href="/contact-us"
+                className="block text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
                 Contact
               </Link>
             </div>

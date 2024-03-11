@@ -18,19 +18,19 @@ const AboutHero = () => {
   return (
     <div className={`${IMFellGreatPrimerSC.className}`}>
       <h1
-        className={`${IMFellGreatPrimer.className} flex justify-center items-center py-5 text-2xl text-tfp-gold-200`}>
+        className={`${IMFellGreatPrimer.className} flex justify-center items-center lg:py-5 text-xl md:text-2xl text-tfp-gold-200`}>
         About Us
       </h1>
       <div
-        className={`${IMFellGreatPrimer.className} flex justify-center items-center pb-5 text-4xl text-tfp-gold-100`}>
+        className={`${IMFellGreatPrimer.className} flex justify-center items-center lg:pb-5 text-2xl md:text-4xl text-tfp-gold-100`}>
         We&apos;re a Distributed Team
       </div>
       <figure className="flex justify-center items-center">
         <World />
       </figure>
       <div
-        className={`${IMFellGreatPrimer.className} flex justify-evenly items-center py-5`}>
-        <div>
+        className={`${IMFellGreatPrimer.className} flex-wrap flex justify-evenly items-center m-5 p-5`}>
+        <div className="my-5">
           <TeamCard
             name="Samarth Khanna"
             role="Co-Founder"
