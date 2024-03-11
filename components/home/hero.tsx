@@ -20,15 +20,21 @@ export const Hero = () => {
           className="bg-blend-darken"
         />
       </figure>
-      <h1 className="flex justify-center items-center text-5xl text-tfp-gold-100 font-medium">
+      <h1 className="flex justify-center items-center text-3xl md:text-5xl text-tfp-gold-100 font-medium">
         Empowering Uttrakhand
       </h1>
-      <div className="flex justify-center items-center py-5">
-        <h2 className="text-2xl font-medium text-tfp-gold-100 mx-4">Seek</h2>
+      <div className="flex justify-center items-center py-1">
+        <h2 className="text-xl md:text-2xl font-medium text-tfp-gold-100 mx-4">
+          Seek
+        </h2>
         <h2 className="text-tfp-white-100 text-xl">|</h2>
-        <h2 className="text-2xl font-medium text-tfp-gold-100 mx-4">Solve</h2>
+        <h2 className="text-xl md:text-2xl font-medium text-tfp-gold-100 mx-4">
+          Solve
+        </h2>
         <h2 className="text-tfp-white-100 text-xl">|</h2>
-        <h2 className="text-2xl font-medium text-tfp-gold-100 mx-4">Sustain</h2>
+        <h2 className="text-xl md:text-2xl font-medium text-tfp-gold-100 mx-4">
+          Sustain
+        </h2>
       </div>
     </div>
   );

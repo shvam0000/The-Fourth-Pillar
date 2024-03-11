@@ -8,10 +8,11 @@ const IMFellGreatPrimerSC = IM_Fell_Great_Primer_SC({
 });
 
 const AboutPage = () => {
-  return;
-  <div className={`${IMFellGreatPrimerSC.className}`}>
-    <AboutHero />
-  </div>;
+  return (
+    <div className={`${IMFellGreatPrimerSC.className}`}>
+      <AboutHero />
+    </div>
+  );
 };
 
 export default AboutPage;

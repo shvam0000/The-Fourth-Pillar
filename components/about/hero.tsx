@@ -18,11 +18,11 @@ const AboutHero = () => {
   return (
     <div className={`${IMFellGreatPrimerSC.className}`}>
       <h1
-        className={`${IMFellGreatPrimer.className} flex justify-center items-center py-5 text-2xl text-tfp-white-100`}>
+        className={`${IMFellGreatPrimer.className} flex justify-center items-center py-5 text-2xl text-tfp-gold-200`}>
         About Us
       </h1>
       <div
-        className={`${IMFellGreatPrimer.className} flex justify-center items-center pb-5 text-4xl text-tfp-white-100`}>
+        className={`${IMFellGreatPrimer.className} flex justify-center items-center pb-5 text-4xl text-tfp-gold-100`}>
         We&apos;re a Distributed Team
       </div>
       <figure className="flex justify-center items-center">
