@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from '@/utils/images/banner.png';
 import Image from 'next/image';
 import { IM_Fell_Great_Primer_SC } from 'next/font/google';
+import { Map } from '@/utils/icons';
 
 const IMFellGreatPrimerSC = IM_Fell_Great_Primer_SC({
   weight: '400',
@@ -36,6 +37,9 @@ export const Hero = () => {
           Sustain
         </h2>
       </div>
+      <figure className="flex justify-center items-center py-10">
+        <Map />
+      </figure>
     </div>
   );
 };
