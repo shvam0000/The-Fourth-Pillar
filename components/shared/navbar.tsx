@@ -131,6 +131,11 @@ const Navbar = () => {
             href="/careers">
             Careers
           </Link>
+          <Link
+            className="text-tfp-white-100 text-2xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
+            href="/contact-us">
+            Contact
+          </Link>
         </div>
         <div>
           <button onClick={toggleMenu} className="block md:hidden">
