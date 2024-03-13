@@ -3,7 +3,7 @@ import React from 'react';
 
 const TeamCard: React.FC<TeamCardProps> = ({ name, img, role }) => {
   return (
-    <div className="p-14 bg-tfp-gold-200 rounded-lg w-auto">
+    <div className="p-14 bg-tfp-gold-200 rounded-lg w-auto md:my-0 my-5">
       <figure>
         <img src={img} alt="Team member" className="h-48 w-48 rounded-full" />
       </figure>

@@ -66,3 +66,21 @@ export const VoiceOf4th = [
     link: '/voice-of-fourth/editorial',
   },
 ];
+
+export const Team = [
+  {
+    id: 1,
+    name: 'Samarth Khanna',
+    role: 'Co-Founder',
+  },
+  {
+    id: 2,
+    name: 'Gargi',
+    role: 'Co-Founder',
+  },
+  {
+    id: 3,
+    name: 'Lorem Ipsum',
+    role: 'Co-Founder',
+  },
+];

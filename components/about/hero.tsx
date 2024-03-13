@@ -3,6 +3,7 @@ import React from 'react';
 import TeamCard from './team-card';
 import { IM_Fell_Great_Primer_SC } from 'next/font/google';
 import { IM_Fell_Great_Primer } from 'next/font/google';
+import { Team } from '@/utils/const';
 
 const IMFellGreatPrimerSC = IM_Fell_Great_Primer_SC({
   weight: '400',
@@ -30,18 +31,16 @@ const AboutHero = () => {
       </figure>
       <div
         className={`${IMFellGreatPrimer.className} flex-wrap flex justify-evenly items-center m-5 p-5`}>
-        <div className="my-5">
-          <TeamCard
-            name="Samarth Khanna"
-            role="Co-Founder"
-            img="https://via.placeholder.com/150"
-          />
-        </div>
-        <TeamCard
-          name="Gargi"
-          role="Co-Founder"
-          img="https://via.placeholder.com/150"
-        />
+        {Team.map((member) => {
+          return (
+            <TeamCard
+              key={member.id}
+              name={member.name}
+              role={member.role}
+              img="https://via.placeholder.com/150"
+            />
+          );
+        })}
       </div>
     </div>
   );
