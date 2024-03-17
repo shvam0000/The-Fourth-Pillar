@@ -1,17 +1,17 @@
 import React from 'react';
-import { IM_Fell_Great_Primer_SC } from 'next/font/google';
+import { IM_Fell_Great_Primer } from 'next/font/google';
 import { Map } from '@/utils/icons';
 import Image from 'next/image';
 import Filler from '@/utils/images/filler.png';
 
-const IMFellGreatPrimerSC = IM_Fell_Great_Primer_SC({
+const IMFellGreatPrimer = IM_Fell_Great_Primer({
   weight: '400',
   subsets: ['latin'],
 });
 
 export const Hero = () => {
   return (
-    <div className={`${IMFellGreatPrimerSC.className}`}>
+    <div className={`${IMFellGreatPrimer.className}`}>
       <figure className="flex justify-center items-center">
         <Map />
       </figure>

@@ -1,14 +1,9 @@
 import { World } from '@/utils/icons';
 import React from 'react';
 import TeamCard from './team-card';
-import { IM_Fell_Great_Primer_SC } from 'next/font/google';
+
 import { IM_Fell_Great_Primer } from 'next/font/google';
 import { Team } from '@/utils/const';
-
-const IMFellGreatPrimerSC = IM_Fell_Great_Primer_SC({
-  weight: '400',
-  subsets: ['latin'],
-});
 
 const IMFellGreatPrimer = IM_Fell_Great_Primer({
   weight: '400',
@@ -17,9 +12,9 @@ const IMFellGreatPrimer = IM_Fell_Great_Primer({
 
 const AboutHero = () => {
   return (
-    <div className={`${IMFellGreatPrimerSC.className}`}>
+    <div className={`${IMFellGreatPrimer.className}`}>
       <h1
-        className={`${IMFellGreatPrimer.className} flex justify-center items-center lg:py-5 text-xl md:text-2xl text-tfp-gold-200`}>
+        className={`flex justify-center items-center lg:py-5 text-xl md:text-2xl text-tfp-gold-200`}>
         About Us
       </h1>
       <div

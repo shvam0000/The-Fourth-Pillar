@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { IM_Fell_Great_Primer_SC } from 'next/font/google';
+import { IM_Fell_Great_Primer } from 'next/font/google';
 import Link from 'next/link';
 import { UKToday, Services, VoiceOf4th } from '@/utils/const';
 import Logo from '@/utils/images/logo.png';
 import Image from 'next/image';
 import { Menu } from '@/utils/icons';
 
-const IMFellGreatPrimerSC = IM_Fell_Great_Primer_SC({
+const IMFellGreatPrimer = IM_Fell_Great_Primer({
   weight: '400',
   subsets: ['latin'],
   display: 'swap',
@@ -17,6 +17,7 @@ const Navbar = () => {
   const [isOpenUKToday, setIsOpenUKToday] = useState<boolean>(false);
   const [isOpenServices, setIsOpenServices] = useState<boolean>(false);
   const [isOpenVoiceOf4th, setIsOpenVoiceOf4th] = useState<boolean>(false);
+  const [isMenuVisible, setIsMenuVisible] = useState<boolean>(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -34,13 +35,30 @@ const Navbar = () => {
     setIsOpenVoiceOf4th(!isOpenVoiceOf4th);
   };
 
+  const toggleSlidingMenu = () => {
+    setIsMenuVisible(!isMenuVisible);
+  };
+
   return (
-    <div className={`${IMFellGreatPrimerSC.className}`}>
+    <div className={`${IMFellGreatPrimer.className}`}>
       <nav className="p-4">
-        <div className="hidden md:flex justify-center items-center ">
+        <div className="hidden md:flex justify-center items-center">
+          <button
+            onClick={() => toggleSlidingMenu()}
+            className="block text-3xl text-tfp-gold-100 font-bold">
+            <Menu />
+          </button>
+
+          <Link
+            className="text-tfp-white-100 text-sm text-justify lg:text-2xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
+            href="/">
+            <figure>
+              <Image src={Logo} alt="The Fourth Perspective" />
+            </figure>
+          </Link>
           <Link
             href="/nativesofuk"
-            className="mx-4 text-sm text-justify lg:text-2xl text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300">
+            className="mx-4 text-sm text-justify lg:text-2xl text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300">
             Natives of UK
           </Link>
           {/* About */}
@@ -50,7 +68,7 @@ const Navbar = () => {
             onMouseLeave={toggleUKTodayMenu}>
             <Link
               href="/uktoday"
-              className="mx-4 text-sm text-justify lg:text-2xl text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 rounded-lg">
+              className="mx-4 text-sm text-justify lg:text-2xl text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 rounded-lg">
               UK Today
             </Link>
             {isOpenUKToday && (
@@ -59,7 +77,7 @@ const Navbar = () => {
                   <Link
                     key={item.id}
                     href={item.link}
-                    className="block mb-2 text-md text-tfp-black-100 transition-colors duration-300 ease-in-out text-tfp-white-100 hover:text-tfp-gold-300">
+                    className="block mb-2 text-md text-tfp-black-100 transition-colors duration-300 ease-in-out text-gray-300 hover:text-tfp-gold-300">
                     {item.title}
                   </Link>
                 ))}
@@ -74,8 +92,8 @@ const Navbar = () => {
             onMouseLeave={toggleServicesMenu}>
             <Link
               href="/services"
-              className="mx-4 text-sm text-justify lg:text-2xl text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 rounded-lg">
-              Services
+              className="mx-4 text-sm text-justify lg:text-2xl text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 rounded-lg">
+              Capabilities
             </Link>
             {isOpenServices && (
               <div className="absolute bg-tfp-blue-200 w-56 backdrop-blur-lg p-2 pl-4 px-5 rounded-md mx-auto right-0 left-0 top-full">
@@ -83,7 +101,7 @@ const Navbar = () => {
                   <Link
                     key={item.id}
                     href={item.link}
-                    className="block mb-2 w-96 text-md text-tfp-black-100 transition-colors duration-300 ease-in-out text-tfp-white-100 hover:text-tfp-gold-300">
+                    className="block mb-2 w-96 text-md text-tfp-black-100 transition-colors duration-300 ease-in-out text-gray-300 hover:text-tfp-gold-300">
                     {item.title}
                   </Link>
                 ))}
@@ -91,15 +109,9 @@ const Navbar = () => {
             )}
           </div>
           {/* End of "Services" section */}
+
           <Link
-            className="text-tfp-white-100 text-sm text-justify lg:text-2xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
-            href="/">
-            <figure>
-              <Image src={Logo} alt="The Fourth Perspective" />
-            </figure>
-          </Link>
-          <Link
-            className="text-tfp-white-100 text-sm text-justify lg:text-2xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
+            className="text-gray-300 text-sm text-justify lg:text-2xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
             href="/about">
             About Us
           </Link>
@@ -110,7 +122,7 @@ const Navbar = () => {
             onMouseLeave={toggleVoiceOf4thMenu}>
             <Link
               href="/voice-of-fourth"
-              className="mx-4 text-sm text-justify lg:text-2xl text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 rounded-lg">
+              className="mx-4 text-sm text-justify lg:text-2xl text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 rounded-lg">
               Voice of 4th
             </Link>
             {isOpenVoiceOf4th && (
@@ -119,7 +131,7 @@ const Navbar = () => {
                   <Link
                     key={item.id}
                     href={item.link}
-                    className="block mb-2 text-md text-tfp-black-100 transition-colors duration-300 ease-in-out text-tfp-white-100 hover:text-tfp-gold-300">
+                    className="block mb-2 text-md text-tfp-black-100 transition-colors duration-300 ease-in-out text-gray-300 hover:text-tfp-gold-300">
                     {item.title}
                   </Link>
                 ))}
@@ -128,15 +140,22 @@ const Navbar = () => {
           </div>
           {/* End of modified "About" dropdown section */}
           <Link
-            className="text-tfp-white-100 text-sm text-justify lg:text-2xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
+            className="text-gray-300 text-sm text-justify lg:text-2xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
             href="/careers">
             Careers
           </Link>
           <Link
-            className="text-tfp-white-100 text-sm text-justify lg:text-2xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
+            className="text-gray-300 text-sm text-justify lg:text-2xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
             href="/contact-us">
             Contact
           </Link>
+        </div>
+        <div
+          className={`fixed inset-0 transform ${
+            isMenuVisible ? 'translate-x-0' : '-translate-x-full'
+          } transition-transform duration-300 ease-in-out z-50`}>
+          {/* Menu content goes here */}
+          hello
         </div>
         <div className="md:hidden">
           <div className="flex">
@@ -158,37 +177,37 @@ const Navbar = () => {
             <div className="md:hidden py-2">
               <Link
                 href="/nativesofuk"
-                className="block mb-2 text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
+                className="block mb-2 text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
                 Natives of UK
               </Link>
               <Link
                 href="/uktoday"
-                className="block mb-2 text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
+                className="block mb-2 text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
                 UK Today
               </Link>
               <Link
                 href="/services"
-                className="block text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
-                Services
+                className="block text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
+                Capabilities
               </Link>
               <Link
                 href="/about"
-                className="block text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
+                className="block text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
                 About Us
               </Link>
               <Link
                 href="/voice-of-fourth"
-                className="block text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
+                className="block text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
                 Voice of 4th
               </Link>
               <Link
                 href="/careers"
-                className="block text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
+                className="block text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
                 Careers
               </Link>
               <Link
                 href="/contact-us"
-                className="block text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
+                className="block text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
                 Contact
               </Link>
             </div>

@@ -1,15 +1,15 @@
 import { AboutHero } from '@/components/about';
 import React from 'react';
-import { IM_Fell_Great_Primer_SC } from 'next/font/google';
+import { IM_Fell_Great_Primer } from 'next/font/google';
 
-const IMFellGreatPrimerSC = IM_Fell_Great_Primer_SC({
+const IMFellGreatPrimer = IM_Fell_Great_Primer({
   weight: '400',
   subsets: ['latin'],
 });
 
 const AboutPage = () => {
   return (
-    <div className={`${IMFellGreatPrimerSC.className}`}>
+    <div className={`${IMFellGreatPrimer.className}`}>
       <AboutHero />
     </div>
   );
