@@ -3,3 +3,7 @@ export type TeamCardProps = {
   role: string;
   img: string;
 };
+
+export type LayoutProps = {
+  children: React.ReactNode;
+};
