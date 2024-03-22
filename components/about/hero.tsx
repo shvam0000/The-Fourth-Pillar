@@ -1,9 +1,11 @@
-import { World } from '@/utils/icons';
 import React from 'react';
-import TeamCard from './team-card';
-
 import { IM_Fell_Great_Primer } from 'next/font/google';
+import Image from 'next/image';
+
+import TeamCard from './team-card';
 import { Team } from '@/utils/const';
+import Columbia from '@/utils/images/columbia.png';
+import Yale from '@/utils/images/yale.png';
 
 const IMFellGreatPrimer = IM_Fell_Great_Primer({
   weight: '400',
@@ -19,11 +21,21 @@ const AboutHero = () => {
       </h1>
       <div
         className={`${IMFellGreatPrimer.className} flex justify-center items-center lg:pb-5 text-2xl md:text-4xl text-tfp-gold-100`}>
-        We&apos;re a Distributed Team
+        Brought to you by the People From
       </div>
-      <figure className="flex justify-center items-center">
-        <World />
-      </figure>
+      <div className="flex justify-center items-center">
+        <figure>
+          <Image
+            src={Columbia}
+            alt="Columbia University"
+            height={100}
+            width={370}
+          />
+        </figure>
+        <figure>
+          <Image src={Yale} alt="Yale University" height={100} width={300} />
+        </figure>
+      </div>
       <div
         className={`${IMFellGreatPrimer.className} flex-wrap flex justify-evenly items-center m-5 p-5`}>
         {Team.map((member) => {
