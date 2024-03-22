@@ -1,7 +1,7 @@
 import React from 'react';
 import { IM_Fell_Great_Primer } from 'next/font/google';
 import { Metadata } from 'next';
-import { Head } from 'next/document';
+import Head from 'next/head';
 
 const IMFellGreatPrimer = IM_Fell_Great_Primer({
   weight: '400',
