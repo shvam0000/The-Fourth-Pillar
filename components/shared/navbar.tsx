@@ -153,9 +153,12 @@ const Navbar = () => {
         <div
           className={`fixed inset-0 transform ${
             isMenuVisible ? 'translate-x-0' : '-translate-x-full'
-          } transition-transform duration-300 ease-in-out z-50`}>
+          } transition-transform duration-300 ease-in-out z-50 h-screen bg-white w-1/3`}>
           {/* Menu content goes here */}
-          hello
+          <div className="flex justify-around">
+            hello
+            <button onClick={toggleSlidingMenu}>close</button>
+          </div>
         </div>
         <div className="md:hidden">
           <div className="flex">
