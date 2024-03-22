@@ -45,15 +45,20 @@ const Navbar = () => {
         <div className="hidden md:flex justify-center items-center">
           <button
             onClick={() => toggleSlidingMenu()}
-            className="block text-3xl text-tfp-gold-100 font-bold">
+            className="block text-5xl text-tfp-gold-100 font-bold">
             <Menu />
           </button>
 
           <Link
-            className="text-tfp-white-100 text-sm text-justify lg:text-2xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
+            className="text-tfp-white-100 text-justify mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
             href="/">
-            <figure>
-              <Image src={Logo} alt="The Fourth Perspective" />
+            <figure className="md:mb-7">
+              <Image
+                src={Logo}
+                alt="The Fourth Perspective"
+                height={100}
+                width={400}
+              />
             </figure>
           </Link>
           <Link
@@ -91,7 +96,7 @@ const Navbar = () => {
             onMouseEnter={toggleServicesMenu}
             onMouseLeave={toggleServicesMenu}>
             <Link
-              href="/services"
+              href="/capabilities"
               className="mx-4 text-sm text-justify lg:text-2xl text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 rounded-lg">
               Capabilities
             </Link>
@@ -189,7 +194,7 @@ const Navbar = () => {
                 UK Today
               </Link>
               <Link
-                href="/services"
+                href="/capabilities"
                 className="block text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
                 Capabilities
               </Link>

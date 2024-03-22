@@ -9,15 +9,15 @@ const IMFellGreatPrimer = IM_Fell_Great_Primer({
 });
 
 export const metadata: Metadata = {
-  title: 'Services',
-  description: 'Services page',
+  title: 'Capabilities',
+  description: 'Capabilities page',
 };
 
 const Services = () => {
   return (
     <div className={`${IMFellGreatPrimer.className}`}>
       <Head>
-        <title>Services</title>
+        <title>Capabilities</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <h1 className="flex justify-center items-center text-3xl text-tfp-gold-200 py-10">
