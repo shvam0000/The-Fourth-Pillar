@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { IM_Fell_Great_Primer } from 'next/font/google';
 import Link from 'next/link';
+import Image from 'next/image';
+
 import { UKToday, Services, VoiceOf4th } from '@/utils/const';
 import Logo from '@/utils/images/logo.png';
-import Image from 'next/image';
 import { Menu } from '@/utils/icons';
 
 const IMFellGreatPrimer = IM_Fell_Great_Primer({
@@ -52,45 +53,15 @@ const Navbar = () => {
           <Link
             className="text-tfp-white-100 text-justify mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
             href="/">
-            <figure className="md:mb-7">
+            <figure className="md:mb-3">
               <Image
                 src={Logo}
                 alt="The Fourth Perspective"
                 height={100}
-                width={400}
+                width={370}
               />
             </figure>
           </Link>
-          <Link
-            href="/nativesofuk"
-            className="mx-4 text-sm text-justify lg:text-2xl text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300">
-            Natives of UK
-          </Link>
-          {/* About */}
-          <div
-            className="relative"
-            onMouseEnter={toggleUKTodayMenu}
-            onMouseLeave={toggleUKTodayMenu}>
-            <Link
-              href="/uktoday"
-              className="mx-4 text-sm text-justify lg:text-2xl text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 rounded-lg">
-              UK Today
-            </Link>
-            {isOpenUKToday && (
-              <div className="absolute bg-tfp-blue-200 backdrop-blur-lg p-2 pl-4 px-5 rounded-md w-48 mx-auto right-0 left-0 top-full">
-                {UKToday.map((item) => (
-                  <Link
-                    key={item.id}
-                    href={item.link}
-                    className="block mb-2 text-md text-tfp-black-100 transition-colors duration-300 ease-in-out text-gray-300 hover:text-tfp-gold-300">
-                    {item.title}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-          {/* End of modified "About" dropdown section */}
-          {/* Servives Section */}
           <div
             className="relative"
             onMouseEnter={toggleServicesMenu}
@@ -113,14 +84,39 @@ const Navbar = () => {
               </div>
             )}
           </div>
-          {/* End of "Services" section */}
-
           <Link
             className="text-gray-300 text-sm text-justify lg:text-2xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
             href="/about">
             About Us
           </Link>
-          {/* About */}
+          <Link
+            href="/nativesofuk"
+            className="mx-4 text-sm text-justify lg:text-2xl text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300">
+            Natives of UK
+          </Link>
+          <div
+            className="relative"
+            onMouseEnter={toggleUKTodayMenu}
+            onMouseLeave={toggleUKTodayMenu}>
+            <Link
+              href="/uktoday"
+              className="mx-4 text-sm text-justify lg:text-2xl text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 rounded-lg">
+              UK Today
+            </Link>
+            {isOpenUKToday && (
+              <div className="absolute bg-tfp-blue-200 backdrop-blur-lg p-2 pl-4 px-5 rounded-md w-48 mx-auto right-0 left-0 top-full">
+                {UKToday.map((item) => (
+                  <Link
+                    key={item.id}
+                    href={item.link}
+                    className="block mb-2 text-md text-tfp-black-100 transition-colors duration-300 ease-in-out text-gray-300 hover:text-tfp-gold-300">
+                    {item.title}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
           <div
             className="relative"
             onMouseEnter={toggleVoiceOf4thMenu}
@@ -128,7 +124,7 @@ const Navbar = () => {
             <Link
               href="/voice-of-fourth"
               className="mx-4 text-sm text-justify lg:text-2xl text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 rounded-lg">
-              Voice of 4th
+              Raibar
             </Link>
             {isOpenVoiceOf4th && (
               <div className="absolute bg-tfp-blue-200 backdrop-blur-lg p-2 pl-4 px-5 rounded-md w-full mx-auto right-0 left-0 top-full">
@@ -184,16 +180,6 @@ const Navbar = () => {
           {isOpen && (
             <div className="md:hidden py-2">
               <Link
-                href="/nativesofuk"
-                className="block mb-2 text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
-                Natives of UK
-              </Link>
-              <Link
-                href="/uktoday"
-                className="block mb-2 text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
-                UK Today
-              </Link>
-              <Link
                 href="/capabilities"
                 className="block text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
                 Capabilities
@@ -204,9 +190,19 @@ const Navbar = () => {
                 About Us
               </Link>
               <Link
+                href="/nativesofuk"
+                className="block mb-2 text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
+                Natives of UK
+              </Link>
+              <Link
+                href="/uktoday"
+                className="block mb-2 text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
+                UK Today
+              </Link>
+              <Link
                 href="/voice-of-fourth"
                 className="block text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
-                Voice of 4th
+                Raibar
               </Link>
               <Link
                 href="/careers"

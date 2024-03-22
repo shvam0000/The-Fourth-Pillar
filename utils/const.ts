@@ -9,11 +9,6 @@ export const UKToday = [
     title: 'Latest Development',
     link: '/uktoday/latest-development',
   },
-  {
-    id: 3,
-    title: 'Regulations',
-    link: '/uktoday/regulations',
-  },
 ];
 
 export const Services = [
