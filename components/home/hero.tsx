@@ -16,7 +16,7 @@ export const Hero = () => {
         <Map />
       </figure>
       <h1 className="flex justify-center items-center text-3xl md:text-5xl text-tfp-gold-100 font-medium lg:pt-5 italic">
-        Empowering Uttrakhand
+        Empowering Uttarakhand
       </h1>
       <div className="flex justify-center items-center py-10">
         <h2 className="text-3xl font-medium text-tfp-gold-100 mx-4">Seek</h2>
@@ -25,7 +25,7 @@ export const Hero = () => {
         <h2 className="text-2xl text-tfp-white-100">|</h2>
         <h2 className="text-3xl font-medium text-tfp-gold-100 mx-4">Sustain</h2>
       </div>
-      //! Remove the below code after the icons are ready
+      {/* //! Remove the below code after the icons are ready */}
       {/* <div className="py-5">
         <div className="md:flex flex-wrap justify-evenly items-center py-5">
           <h2 className="text-xl md:text-4xl font-medium text-tfp-gold-100 text-center md:p-0 py-4">
