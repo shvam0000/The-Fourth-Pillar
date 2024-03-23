@@ -14,36 +14,21 @@ export const UKToday = [
 export const Capabilities = [
   {
     id: 1,
-    title: 'Government Consultancy',
-    link: '/capabilities/government-consultancy',
+    title: 'Consultancy',
+    link: '/capabilities/consultancy',
   },
   {
     id: 2,
-    title: 'Political Consultancy',
-    link: '/capabilities/political-consultancy',
+    title: 'Himalayan Haat',
+    link: '/capabilities/himalayan-haat',
   },
   {
     id: 3,
-    title: 'Corporate Consultancy',
-    link: '/capabilities/corporate-consultancy',
+    title: 'Vidya Path',
+    link: '/capabilities/vidyapath',
   },
   {
     id: 4,
-    title: 'Social Consultancy',
-    link: '/capabilities/social-consultancy',
-  },
-  {
-    id: 5,
-    title: 'Career Development',
-    link: '/capabilities/career-development',
-  },
-  {
-    id: 6,
-    title: 'ODOP',
-    link: '/capabilities/odop',
-  },
-  {
-    id: 7,
     title: 'Analytics',
     link: '/capabilities/analytics',
   },

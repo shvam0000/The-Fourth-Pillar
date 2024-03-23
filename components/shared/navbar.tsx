@@ -72,12 +72,12 @@ const Navbar = () => {
               Capabilities
             </Link>
             {isOpenCapabilities && (
-              <div className="absolute bg-tfp-blue-200 w-56 backdrop-blur-lg p-2 pl-4 px-5 rounded-md mx-auto right-0 left-0 top-full">
+              <div className="absolute bg-tfp-blue-200 w-max backdrop-blur-lg p-2 pl-4 px-5 rounded-md mx-auto right-0 left-0 top-full">
                 {Capabilities.map((item) => (
                   <Link
                     key={item.id}
                     href={item.link}
-                    className="block mb-2 w-96 text-md text-tfp-black-100 transition-colors duration-300 ease-in-out text-gray-300 hover:text-tfp-gold-300">
+                    className="block mb-2 w-96 text-lg text-tfp-black-100 transition-colors duration-300 ease-in-out text-gray-300 hover:text-tfp-gold-300">
                     {item.title}
                   </Link>
                 ))}
