@@ -2,7 +2,7 @@ import React from 'react';
 import { IM_Fell_Great_Primer } from 'next/font/google';
 import { Map } from '@/utils/icons';
 import Image from 'next/image';
-import Filler from '@/utils/images/filler.png';
+import { KeepInTouch } from '../shared';
 
 const IMFellGreatPrimer = IM_Fell_Great_Primer({
   weight: '400',
@@ -25,6 +25,7 @@ export const Hero = () => {
         <h2 className="text-2xl text-tfp-white-100">|</h2>
         <h2 className="text-3xl font-medium text-tfp-gold-100 mx-4">Sustain</h2>
       </div>
+      <KeepInTouch />
       {/* //! Remove the below code after the icons are ready */}
       {/* <div className="py-5">
         <div className="md:flex flex-wrap justify-evenly items-center py-5">
