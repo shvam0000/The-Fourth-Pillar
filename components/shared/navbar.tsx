@@ -3,7 +3,7 @@ import { IM_Fell_Great_Primer } from 'next/font/google';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import { UKToday, Services, VoiceOf4th } from '@/utils/const';
+import { UKToday, Capabilities, VoiceOf4th } from '@/utils/const';
 import Logo from '@/utils/images/logo.png';
 import { Menu } from '@/utils/icons';
 
@@ -16,7 +16,7 @@ const IMFellGreatPrimer = IM_Fell_Great_Primer({
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isOpenUKToday, setIsOpenUKToday] = useState<boolean>(false);
-  const [isOpenServices, setIsOpenServices] = useState<boolean>(false);
+  const [isOpenCapabilities, setIsOpenCapabilities] = useState<boolean>(false);
   const [isOpenVoiceOf4th, setIsOpenVoiceOf4th] = useState<boolean>(false);
   const [isMenuVisible, setIsMenuVisible] = useState<boolean>(false);
 
@@ -28,8 +28,8 @@ const Navbar = () => {
     setIsOpenUKToday(!isOpenUKToday);
   };
 
-  const toggleServicesMenu = () => {
-    setIsOpenServices(!isOpenServices);
+  const toggleCapabilitiesMenu = () => {
+    setIsOpenCapabilities(!isOpenCapabilities);
   };
 
   const toggleVoiceOf4thMenu = () => {
@@ -64,16 +64,16 @@ const Navbar = () => {
           </Link>
           <div
             className="relative"
-            onMouseEnter={toggleServicesMenu}
-            onMouseLeave={toggleServicesMenu}>
+            onMouseEnter={toggleCapabilitiesMenu}
+            onMouseLeave={toggleCapabilitiesMenu}>
             <Link
               href="/capabilities"
               className="mx-4 text-sm text-justify lg:text-2xl text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 rounded-lg">
               Capabilities
             </Link>
-            {isOpenServices && (
+            {isOpenCapabilities && (
               <div className="absolute bg-tfp-blue-200 w-56 backdrop-blur-lg p-2 pl-4 px-5 rounded-md mx-auto right-0 left-0 top-full">
-                {Services.map((item) => (
+                {Capabilities.map((item) => (
                   <Link
                     key={item.id}
                     href={item.link}

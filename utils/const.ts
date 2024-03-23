@@ -11,41 +11,41 @@ export const UKToday = [
   },
 ];
 
-export const Services = [
+export const Capabilities = [
   {
     id: 1,
     title: 'Government Consultancy',
-    link: '/services/government-consultancy',
+    link: '/capabilities/government-consultancy',
   },
   {
     id: 2,
     title: 'Political Consultancy',
-    link: '/services/political-consultancy',
+    link: '/capabilities/political-consultancy',
   },
   {
     id: 3,
     title: 'Corporate Consultancy',
-    link: '/services/corporate-consultancy',
+    link: '/capabilities/corporate-consultancy',
   },
   {
     id: 4,
     title: 'Social Consultancy',
-    link: '/services/social-consultancy',
+    link: '/capabilities/social-consultancy',
   },
   {
     id: 5,
     title: 'Career Development',
-    link: '/services/career-development',
+    link: '/capabilities/career-development',
   },
   {
     id: 6,
     title: 'ODOP',
-    link: '/services/odop',
+    link: '/capabilities/odop',
   },
   {
     id: 7,
     title: 'Analytics',
-    link: '/services/analytics',
+    link: '/capabilities/analytics',
   },
 ];
 
