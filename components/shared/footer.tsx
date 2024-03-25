@@ -2,10 +2,8 @@ import React from 'react';
 import Logo from '@/utils/images/logo.png';
 import Image from 'next/image';
 import { IM_Fell_Great_Primer } from 'next/font/google';
-import { SocialIcon } from 'react-social-icons/component';
-import 'react-social-icons/facebook';
-import 'react-social-icons/x';
-import 'react-social-icons/linkedin';
+import { SocialIcon } from 'react-custom-social-icons';
+import Link from 'next/link';
 
 const IMFellGreatPrimer = IM_Fell_Great_Primer({
   weight: '400',
@@ -16,23 +14,32 @@ const Footer = () => {
   return (
     <div className={`${IMFellGreatPrimer.className} px-10`}>
       <div className="flex justify-between items-center">
-        <figure className="py-5">
-          <Image src={Logo} alt="logo" width={300} height={200} />
-        </figure>
+        <Link href="/">
+          <figure className="py-5">
+            <Image src={Logo} alt="logo" width={300} height={200} />
+          </figure>
+        </Link>
         <div className="flex">
-          <figure className="text-sm px-2">
-            <SocialIcon url="https://x.com" />
-          </figure>
-          <figure className="text-sm px-2">
-            <SocialIcon url="https://facebook.com" />
-          </figure>
-          <figure className="text-sm px-2">
-            <SocialIcon url="https://linkedin.com/in/shivamshekhar19" />
-          </figure>
-        </div>
-        <div className="flex justify-center items-center">
-          <div className="px-4 text-2xl text-tfp-white-100">About Us</div>
-          <div className="px-4 text-2xl text-tfp-white-100">Contact</div>
+          <Link href="https://www.x.com/">
+            <figure className="px-2 rounded-full">
+              <SocialIcon network="twitter" size="small" />
+            </figure>
+          </Link>
+          <Link href="https://www.facebook.com/">
+            <figure className="text-[#3b5998] px-2 rounded-full">
+              <SocialIcon network="facebook" size="small" />
+            </figure>
+          </Link>
+          <Link href="https://www.linkedin.com/">
+            <figure className="px-2 rounded-full">
+              <SocialIcon network="linkedin" size="small" />
+            </figure>
+          </Link>
+          <Link href="https://www.instagram.com/">
+            <figure className="px-2 rounded-full">
+              <SocialIcon network="instagram" size="small" />
+            </figure>
+          </Link>
         </div>
       </div>
     </div>
