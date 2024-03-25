@@ -20,7 +20,6 @@ const IMFellGreatPrimer = IM_Fell_Great_Primer({
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [isOpenUKToday, setIsOpenUKToday] = useState<boolean>(false);
   const [isOpenCapabilities, setIsOpenCapabilities] = useState<boolean>(false);
   const [isOpenVoiceOf4th, setIsOpenVoiceOf4th] = useState<boolean>(false);
   const [isMenuVisible, setIsMenuVisible] = useState<boolean>(false);
