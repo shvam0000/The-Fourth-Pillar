@@ -27,10 +27,36 @@ export const Capabilities = [
     title: 'Vidya Path',
     link: '/capabilities/vidyapath',
   },
+];
+
+export const AboutUs = [
   {
-    id: 4,
+    id: 1,
+    title: 'Our Story',
+    link: '/about/our-story',
+  },
+  {
+    id: 2,
+    title: 'Our Team',
+    link: '/about/our-team',
+  },
+];
+
+export const UttarakhandInsights = [
+  {
+    id: 1,
+    title: 'Natives of Uttarakhand',
+    link: '/uttarakhand-insights/natives-of-uttarakhand',
+  },
+  {
+    id: 2,
+    title: 'Uttarakhand Today',
+    link: '/uttarakhand-insights/uttarakhand-today',
+  },
+  {
+    id: 3,
     title: 'Analytics',
-    link: '/capabilities/analytics',
+    link: '/uttarakhand-insights/analytics',
   },
 ];
 

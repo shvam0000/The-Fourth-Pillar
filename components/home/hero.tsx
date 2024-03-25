@@ -1,15 +1,25 @@
 import React from 'react';
 import { IM_Fell_Great_Primer } from 'next/font/google';
-import { Map } from '@/utils/icons';
 import Image from 'next/image';
+import Marquee from 'react-easy-marquee';
+
+import Picture1 from '@/utils/images/1.jpg';
+import Picture2 from '@/utils/images/2.jpg';
+import Picture3 from '@/utils/images/3.jpg';
+import Picture4 from '@/utils/images/4.jpg';
+import Picture5 from '@/utils/images/5.jpg';
+import Picture6 from '@/utils/images/6.jpg';
 import { KeepInTouch } from '../shared';
+import { Map } from '@/utils/icons';
 
 const IMFellGreatPrimer = IM_Fell_Great_Primer({
   weight: '400',
   subsets: ['latin'],
 });
 
-export const Hero = () => {
+const Hero = () => {
+  const images = [Picture1, Picture2, Picture3, Picture4, Picture5, Picture6];
+
   return (
     <div className={`${IMFellGreatPrimer.className}`}>
       <figure className="flex justify-center items-center">
@@ -25,40 +35,20 @@ export const Hero = () => {
         <h2 className="text-2xl text-tfp-white-100">|</h2>
         <h2 className="text-3xl font-medium text-tfp-gold-100 mx-4">Sustain</h2>
       </div>
-      <KeepInTouch />
-      {/* //! Remove the below code after the icons are ready */}
-      {/* <div className="py-5">
-        <div className="md:flex flex-wrap justify-evenly items-center py-5">
-          <h2 className="text-xl md:text-4xl font-medium text-tfp-gold-100 text-center md:p-0 py-4">
-            Seek
-          </h2>
-          <figure className="text-center">
-            <Image
-              src={Filler}
-              alt="Seek Image"
-              // className="md:h-400 md:w-400 h-200 w-200"
-              height={400}
-              width={400}
-            />
-          </figure>
-        </div>
-        <div className="md:flex flex-wrap-reverse justify-evenly items-center py-5">
-          <figure className="text-center ">
-            <Image src={Filler} alt="Seek Image" height={400} width={400} />
-          </figure>
-          <h2 className="text-xl md:text-4xl font-medium text-tfp-gold-100 text-center md:p-0 py-4">
-            Solve
-          </h2>
-        </div>
-        <div className="md:flex flex-wrap justify-evenly items-center py-5">
-          <h2 className="text-xl md:text-4xl font-medium text-tfp-gold-100 text-center md:p-0 py-4">
-            Sustain
-          </h2>
-          <figure className="text-center">
-            <Image src={Filler} alt="Seek Image" height={400} width={400} />
-          </figure>
-        </div>
-      </div> */}
+
+      <Marquee
+        duration={15000}
+        background="#fafafa"
+        height="250px"
+        reverse={true}>
+        {images.map((image) => (
+          <Image src={image} alt="picsum" width={900} height={250} />
+        ))}
+      </Marquee>
+
+      <div className="mt-16">
+        <KeepInTouch />
+      </div>
     </div>
   );
 };
