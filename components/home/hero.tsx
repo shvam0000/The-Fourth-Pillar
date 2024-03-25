@@ -41,8 +41,14 @@ const Hero = () => {
         background="#fafafa"
         height="250px"
         reverse={true}>
-        {images.map((image) => (
-          <Image src={image} alt="picsum" width={900} height={250} />
+        {images.map((image, index) => (
+          <Image
+            src={image}
+            alt="picsum"
+            width={900}
+            height={250}
+            key={index}
+          />
         ))}
       </Marquee>
 
