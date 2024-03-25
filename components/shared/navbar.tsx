@@ -3,7 +3,12 @@ import { IM_Fell_Great_Primer } from 'next/font/google';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import { UKToday, Capabilities, VoiceOf4th } from '@/utils/const';
+import {
+  Capabilities,
+  VoiceOf4th,
+  AboutUs,
+  UttarakhandInsights,
+} from '@/utils/const';
 import Logo from '@/utils/images/logo.png';
 import { Menu } from '@/utils/icons';
 
@@ -19,13 +24,20 @@ const Navbar = () => {
   const [isOpenCapabilities, setIsOpenCapabilities] = useState<boolean>(false);
   const [isOpenVoiceOf4th, setIsOpenVoiceOf4th] = useState<boolean>(false);
   const [isMenuVisible, setIsMenuVisible] = useState<boolean>(false);
+  const [isAboutUs, setIsAboutUs] = useState<boolean>(false);
+  const [isUttrakhandInsights, setIsUttrakhandInsights] =
+    useState<boolean>(false);
+
+  const toggleAboutUsMenu = () => {
+    setIsAboutUs(!isAboutUs);
+  };
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  const toggleUKTodayMenu = () => {
-    setIsOpenUKToday(!isOpenUKToday);
+  const toggleUttarakhanInsightsMenu = () => {
+    setIsUttrakhandInsights(!isUttrakhandInsights);
   };
 
   const toggleCapabilitiesMenu = () => {
@@ -46,7 +58,7 @@ const Navbar = () => {
         <div className="hidden md:flex justify-center items-center">
           <button
             onClick={() => toggleSlidingMenu()}
-            className="block text-5xl text-tfp-gold-100 font-bold">
+            className="block text-5xl text-[#BA9C57] font-bold">
             <Menu />
           </button>
 
@@ -69,7 +81,7 @@ const Navbar = () => {
             <Link
               href="/capabilities"
               className="mx-4 text-sm text-justify lg:text-2xl text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 rounded-lg">
-              Capabilities
+              Services
             </Link>
             {isOpenCapabilities && (
               <div className="absolute bg-tfp-blue-200 w-max backdrop-blur-lg p-2 pl-4 px-5 rounded-md mx-auto right-0 left-0 top-full">
@@ -84,32 +96,44 @@ const Navbar = () => {
               </div>
             )}
           </div>
-          <Link
-            className="text-gray-300 text-sm text-justify lg:text-2xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
-            href="/about">
-            About Us
-          </Link>
-          <Link
-            href="/nativesofuk"
-            className="mx-4 text-sm text-justify lg:text-2xl text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300">
-            Natives of UK
-          </Link>
           <div
             className="relative"
-            onMouseEnter={toggleUKTodayMenu}
-            onMouseLeave={toggleUKTodayMenu}>
+            onMouseEnter={toggleAboutUsMenu}
+            onMouseLeave={toggleAboutUsMenu}>
             <Link
-              href="/uktoday"
-              className="mx-4 text-sm text-justify lg:text-2xl text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 rounded-lg">
-              UK Today
+              className="text-gray-300 text-sm text-justify lg:text-2xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
+              href="/about">
+              About Us
             </Link>
-            {isOpenUKToday && (
-              <div className="absolute bg-tfp-blue-200 backdrop-blur-lg p-2 pl-4 px-5 rounded-md w-48 mx-auto right-0 left-0 top-full">
-                {UKToday.map((item) => (
+            {isAboutUs && (
+              <div className="absolute bg-tfp-blue-200 w-full backdrop-blur-lg p-2 pl-4 px-5 rounded-md mx-auto right-0 left-0 top-full">
+                {AboutUs.map((item) => (
                   <Link
                     key={item.id}
                     href={item.link}
-                    className="block mb-2 text-md text-tfp-black-100 transition-colors duration-300 ease-in-out text-gray-300 hover:text-tfp-gold-300">
+                    className="block mb-2 w-96 text-lg text-tfp-black-100 transition-colors duration-300 ease-in-out text-gray-300 hover:text-tfp-gold-300">
+                    {item.title}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+          <div
+            className="relative"
+            onMouseEnter={toggleUttarakhanInsightsMenu}
+            onMouseLeave={toggleUttarakhanInsightsMenu}>
+            <Link
+              className="text-gray-300 text-sm text-justify lg:text-2xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
+              href="/about">
+              About Us
+            </Link>
+            {isUttrakhandInsights && (
+              <div className="absolute bg-tfp-blue-200 w-fit backdrop-blur-lg p-2 pl-4 px-5 rounded-md mx-auto right-0 left-0 top-full">
+                {UttarakhandInsights.map((item) => (
+                  <Link
+                    key={item.id}
+                    href={item.link}
+                    className="block mb-2 w-96 text-lg text-tfp-black-100 transition-colors duration-300 ease-in-out text-gray-300 hover:text-tfp-gold-300">
                     {item.title}
                   </Link>
                 ))}
@@ -148,7 +172,7 @@ const Navbar = () => {
           <Link
             className="text-gray-300 text-sm text-justify lg:text-2xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
             href="/contact-us">
-            Contact
+            Contact Us
           </Link>
         </div>
         <div
@@ -158,14 +182,14 @@ const Navbar = () => {
           {/* Menu content goes here */}
           <div className="flex justify-around">
             hello
-            <button onClick={toggleSlidingMenu}>close</button>
+            <button onClick={toggleSlidingMenu}>X</button>
           </div>
         </div>
         <div className="md:hidden">
           <div className="flex">
             <button
               onClick={toggleMenu}
-              className="block text-3xl text-tfp-gold-100 font-bold">
+              className="block text-3xl text-[#F4E697] font-bold">
               <Menu />
             </button>
             <Link href="/" className="mx-10">
