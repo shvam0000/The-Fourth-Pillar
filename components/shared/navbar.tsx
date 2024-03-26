@@ -123,8 +123,8 @@ const Navbar = () => {
             onMouseLeave={toggleUttarakhanInsightsMenu}>
             <Link
               className="text-gray-300 text-sm text-justify lg:text-2xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
-              href="/about">
-              About Us
+              href="/uttarakhand-insights">
+              Uttarakhand Insights
             </Link>
             {isUttrakhandInsights && (
               <div className="absolute bg-tfp-blue-200 w-fit backdrop-blur-lg p-2 pl-4 px-5 rounded-md mx-auto right-0 left-0 top-full">
