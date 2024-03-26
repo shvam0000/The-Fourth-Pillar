@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Tooltip as ReactTooltip } from 'react-tooltip';
 
 const Map = () => {
   const [toggleHaridwar, setToggleHaridwar] = useState(false);
@@ -24,7 +25,7 @@ const Map = () => {
   };
 
   const showHaridwarData = () => {
-    toast.info('Haridwar');
+    //toast.info('Haridwar');
   };
 
   const toggleUttarkashiMenu = () => {
@@ -33,7 +34,7 @@ const Map = () => {
   };
 
   const showUttarkashiData = () => {
-    toast.info('Uttarkashi');
+    //toast.info('Uttarkashi');
   };
 
   const toggleRudraprayagMenu = () => {
@@ -42,7 +43,7 @@ const Map = () => {
   };
 
   const showRudraprayagData = () => {
-    toast.info('Rudraprayag');
+    //toast.info('Rudraprayag');
   };
 
   const toggleChamoliMenu = () => {
@@ -51,7 +52,7 @@ const Map = () => {
   };
 
   const showChamoliData = () => {
-    toast.info('Chamoli');
+    //toast.info('Chamoli');
   };
 
   const toggleDehradunMenu = () => {
@@ -60,7 +61,7 @@ const Map = () => {
   };
 
   const showDehradunData = () => {
-    toast.info('Dehradun');
+    //toast.info('Dehradun');
   };
 
   const toggleTehriGarhwalMenu = () => {
@@ -69,7 +70,7 @@ const Map = () => {
   };
 
   const showTehriGarhwalData = () => {
-    toast.info('Tehri Garhwal');
+    //toast.info('Tehri Garhwal');
   };
 
   const togglePauriGarhwalMenu = () => {
@@ -78,7 +79,7 @@ const Map = () => {
   };
 
   const showPauriGarhwalData = () => {
-    toast.info('Pauri Garhwal');
+    // toast.info('Pauri Garhwal');
   };
 
   const togglePithoragarhMenu = () => {
@@ -87,7 +88,7 @@ const Map = () => {
   };
 
   const showPithoragarhData = () => {
-    toast.info('Pithoragarh');
+    //toast.info('Pithoragarh');
   };
 
   const toggleAlmoraMenu = () => {
@@ -96,7 +97,7 @@ const Map = () => {
   };
 
   const showAlmoraData = () => {
-    toast.info('Almora');
+    //toast.info('Almora');
   };
 
   const toggleBageshwarMenu = () => {
@@ -105,7 +106,7 @@ const Map = () => {
   };
 
   const showBageshwarData = () => {
-    toast.info('Bageshwar');
+    //toast.info('Bageshwar');
   };
 
   const toggleChampawatMenu = () => {
@@ -114,7 +115,7 @@ const Map = () => {
   };
 
   const showChampawatData = () => {
-    toast.info('Champawat');
+    // toast.info('Champawat');
   };
 
   const toggleNainitalMenu = () => {
@@ -123,7 +124,7 @@ const Map = () => {
   };
 
   const showNainitalData = () => {
-    toast.info('Nainital');
+    //toast.info('Nainital');
   };
 
   const toggleUdhamSinghNagarMenu = () => {
@@ -132,11 +133,31 @@ const Map = () => {
   };
 
   const showUdhamSinghNagarData = () => {
-    toast.info('Udham Singh Nagar');
+    //toast.info('Udham Singh Nagar');
   };
 
   return (
     <>
+      <ReactTooltip
+        id="Udham-Singh-Nagar"
+        place="bottom"
+        content="Udham
+         Singh Nagar"
+      />
+      <ReactTooltip id="haridwar" place="bottom">
+        Haridwar
+      </ReactTooltip>
+      <ReactTooltip id="Nainital" place="bottom" content="Nainital" />
+      <ReactTooltip id="Champawat" place="bottom" content="Champawat" />
+      <ReactTooltip id="Bageshwar" place="bottom" content="Bageshwar" />
+      <ReactTooltip id="Almora" place="bottom" content="Almora" />
+      <ReactTooltip id="Pithoragarh" place="bottom" content="Pithoragarh" />
+      <ReactTooltip id="Pauri-Garhwal" place="bottom" content="Pauri Garhwal" />
+      <ReactTooltip id="Tehri-Garhwal" place="bottom" content="Tehri Garhwal" />
+      <ReactTooltip id="Dehradun" place="bottom" content="Dehradun" />
+      <ReactTooltip id="Chamoli" place="bottom" content="Chamoli" />
+      <ReactTooltip id="Rudraprayag" place="bottom" content="Rudraprayag" />
+      <ReactTooltip id="Uttarkashi" place="bottom" content="Uttarkashi" />
       <svg
         width="741"
         height="676"
@@ -160,6 +181,7 @@ const Map = () => {
             showHaridwarData();
             toggleHaridwarMenu();
           }}
+          data-tooltip-id="haridwar"
           onMouseLeave={toggleHaridwarMenu}
           mask="url(#path-1-inside-1_7_3)"
         />
@@ -179,6 +201,7 @@ const Map = () => {
             showDehradunData();
             toggleDehradunMenu();
           }}
+          data-tooltip-id="Dehradun"
           onMouseLeave={toggleDehradunMenu}
         />
         <path
@@ -202,6 +225,7 @@ const Map = () => {
             showUttarkashiData();
             toggleUttarkashiMenu();
           }}
+          data-tooltip-id="Uttarkashi"
           onMouseLeave={toggleUttarkashiMenu}
         />
         <path
@@ -227,6 +251,7 @@ const Map = () => {
             toggleUdhamSinghNagarMenu();
           }}
           onMouseLeave={toggleUdhamSinghNagarMenu}
+          data-tooltip-id="Udham-Singh-Nagar"
           stroke-width="4"
           mask="url(#path-6-inside-4_7_3)"
         />
@@ -246,6 +271,7 @@ const Map = () => {
             showPauriGarhwalData();
             togglePauriGarhwalMenu();
           }}
+          data-tooltip-id="Pauri-Garhwal"
           onMouseLeave={togglePauriGarhwalMenu}
         />
         <path
@@ -272,6 +298,7 @@ const Map = () => {
           }}
           onMouseLeave={toggleNainitalMenu}
           stroke-width="2"
+          data-tooltip-id="Nainital"
           mask="url(#path-9-inside-6_7_3)"
         />
         <mask id="path-10-inside-7_7_3" fill="white">
@@ -291,6 +318,7 @@ const Map = () => {
             showChampawatData();
             toggleChampawatMenu();
           }}
+          data-tooltip-id="Champawat"
           onMouseLeave={toggleChampawatMenu}
           stroke-width="4"
           mask="url(#path-10-inside-7_7_3)"
@@ -311,6 +339,7 @@ const Map = () => {
             showAlmoraData();
             toggleAlmoraMenu();
           }}
+          data-tooltip-id="Almora"
           onMouseLeave={toggleAlmoraMenu}
           stroke="#8E5F01"
           stroke-width="4"
@@ -333,6 +362,7 @@ const Map = () => {
             showBageshwarData();
             toggleBageshwarMenu();
           }}
+          data-tooltip-id="Bageshwar"
           onMouseLeave={toggleBageshwarMenu}
           stroke-width="4"
           mask="url(#path-12-inside-9_7_3)"
@@ -356,6 +386,7 @@ const Map = () => {
           }}
           onMouseLeave={togglePithoragarhMenu}
           stroke-width="4"
+          data-tooltip-id="Pithoragarh"
           mask="url(#path-13-inside-10_7_3)"
         />
         <mask id="path-14-inside-11_7_3" fill="white">
@@ -377,6 +408,7 @@ const Map = () => {
           }}
           onMouseLeave={toggleChamoliMenu}
           stroke-width="4"
+          data-tooltip-id="Chamoli"
           mask="url(#path-14-inside-11_7_3)"
         />
         <mask id="path-15-inside-12_7_3" fill="white">
@@ -398,6 +430,7 @@ const Map = () => {
           }}
           onMouseLeave={toggleRudraprayagMenu}
           stroke-width="4"
+          data-tooltip-id="Rudraprayag"
           mask="url(#path-15-inside-12_7_3)"
         />
         <mask id="path-16-inside-13_7_3" fill="white">
@@ -417,6 +450,7 @@ const Map = () => {
             showTehriGarhwalData();
             toggleTehriGarhwalMenu();
           }}
+          data-tooltip-id="Tehri-Garhwal"
           onMouseLeave={toggleTehriGarhwalMenu}
           stroke-width="4"
           mask="url(#path-16-inside-13_7_3)"
