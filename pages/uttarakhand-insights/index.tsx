@@ -21,7 +21,7 @@ const UttarakhandInsights = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <h1 className="flex justify-center items-center text-3xl text-tfp-gold-200 py-10">
-        Uttarakhand Insights
+        Insights
       </h1>
       <h1 className="flex justify-center items-center text-5xl text-tfp-gold-100 py-10">
         Coming Soon...
