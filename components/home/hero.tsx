@@ -16,9 +16,7 @@ import Picture10 from "@/utils/images/10.jpg";
 import Picture11 from "@/utils/images/11.jpg";
 import Picture12 from "@/utils/images/12.jpg";
 import Picture13 from "@/utils/images/13.jpg";
-import Picture14 from "@/utils/images/14.jpg";
 import Picture15 from "@/utils/images/15.jpg";
-import Picture16 from "@/utils/images/16.jpg";
 
 import { KeepInTouch } from "../shared";
 import { Map } from "@/utils/icons";
