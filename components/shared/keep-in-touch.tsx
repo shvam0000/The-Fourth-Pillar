@@ -13,7 +13,7 @@ const KeepInTouch = () => {
             alt="Keep in touch"
             height={400}
             width={320}
-            className="rounded-l-lg"
+            className="rounded-lg md:rounded-l-lg"
           />
         </figure>
         <div className="mx-auto w-full py-5 text-center md:w-3/5">

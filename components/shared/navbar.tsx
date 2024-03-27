@@ -224,7 +224,7 @@ const Navbar = () => {
                 href="/capabilities"
                 className="block py-2 text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
               >
-                Capabilities
+                Services
               </Link>
               <Link
                 href="/about"
@@ -233,16 +233,10 @@ const Navbar = () => {
                 About Us
               </Link>
               <Link
-                href="/nativesofuk"
+                href="/uttarakhand-insights"
                 className="mb-2 block py-2 text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
               >
-                Natives of UK
-              </Link>
-              <Link
-                href="/uktoday"
-                className="mb-2 block py-2 text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
-              >
-                UK Today
+                Insights
               </Link>
               <Link
                 href="/voice-of-fourth"
@@ -260,7 +254,7 @@ const Navbar = () => {
                 href="/contact-us"
                 className="block py-2 text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
               >
-                Contact
+                Contact Us
               </Link>
             </div>
           )}
