@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
-import { IM_Fell_Great_Primer } from 'next/font/google';
-import Link from 'next/link';
-import Image from 'next/image';
+import React, { useState } from "react";
+import { IM_Fell_Great_Primer } from "next/font/google";
+import Link from "next/link";
+import Image from "next/image";
 
 import {
   Capabilities,
   VoiceOf4th,
   AboutUs,
   UttarakhandInsights,
-} from '@/utils/const';
-import Logo from '@/utils/images/logo.png';
-import { Menu } from '@/utils/icons';
+} from "@/utils/const";
+import Logo from "@/utils/images/logo.png";
+import { Menu } from "@/utils/icons";
 
 const IMFellGreatPrimer = IM_Fell_Great_Primer({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
 });
 
 const Navbar = () => {
@@ -54,16 +54,18 @@ const Navbar = () => {
   return (
     <div className={`${IMFellGreatPrimer.className}`}>
       <nav className="p-4">
-        <div className="hidden md:flex justify-center items-center">
+        <div className="hidden items-center justify-center md:flex">
           <button
             onClick={() => toggleSlidingMenu()}
-            className="block text-5xl text-[#BA9C57] font-bold">
+            className="block text-5xl font-bold text-[#BA9C57]"
+          >
             <Menu />
           </button>
 
           <Link
-            className="text-tfp-white-100 text-justify mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
-            href="/">
+            className="mx-4 text-justify text-tfp-white-100 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
+            href="/"
+          >
             <figure className="md:mb-3">
               <Image
                 src={Logo}
@@ -76,19 +78,22 @@ const Navbar = () => {
           <div
             className="relative"
             onMouseEnter={toggleCapabilitiesMenu}
-            onMouseLeave={toggleCapabilitiesMenu}>
+            onMouseLeave={toggleCapabilitiesMenu}
+          >
             <Link
               href="/capabilities"
-              className="mx-4 text-sm text-justify lg:text-2xl text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 rounded-lg">
+              className="mx-4 rounded-lg text-justify text-sm text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 lg:text-2xl"
+            >
               Services
             </Link>
             {isOpenCapabilities && (
-              <div className="absolute bg-tfp-blue-200 w-max backdrop-blur-lg p-2 pl-4 px-5 rounded-md mx-auto right-0 left-0 top-full">
+              <div className="absolute left-0 right-0 top-full mx-auto w-max rounded-md bg-tfp-blue-200 p-2 px-5 pl-4 backdrop-blur-lg">
                 {Capabilities.map((item) => (
                   <Link
                     key={item.id}
                     href={item.link}
-                    className="block mb-2 w-96 text-lg text-tfp-black-100 transition-colors duration-300 ease-in-out text-gray-300 hover:text-tfp-gold-300">
+                    className="text-tfp-black-100 mb-2 block w-96 text-lg text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
+                  >
                     {item.title}
                   </Link>
                 ))}
@@ -98,19 +103,22 @@ const Navbar = () => {
           <div
             className="relative"
             onMouseEnter={toggleAboutUsMenu}
-            onMouseLeave={toggleAboutUsMenu}>
+            onMouseLeave={toggleAboutUsMenu}
+          >
             <Link
-              className="text-gray-300 text-sm text-justify lg:text-2xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
-              href="/about">
+              className="mx-4 text-justify text-sm text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 lg:text-2xl"
+              href="/about"
+            >
               About Us
             </Link>
             {isAboutUs && (
-              <div className="absolute bg-tfp-blue-200 w-full backdrop-blur-lg p-2 pl-4 px-5 rounded-md mx-auto right-0 left-0 top-full">
+              <div className="absolute left-0 right-0 top-full mx-auto w-full rounded-md bg-tfp-blue-200 p-2 px-5 pl-4 backdrop-blur-lg">
                 {AboutUs.map((item) => (
                   <Link
                     key={item.id}
                     href={item.link}
-                    className="block mb-2 w-96 text-lg text-tfp-black-100 transition-colors duration-300 ease-in-out text-gray-300 hover:text-tfp-gold-300">
+                    className="text-tfp-black-100 mb-2 block w-96 text-lg text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
+                  >
                     {item.title}
                   </Link>
                 ))}
@@ -120,19 +128,22 @@ const Navbar = () => {
           <div
             className="relative"
             onMouseEnter={toggleUttarakhanInsightsMenu}
-            onMouseLeave={toggleUttarakhanInsightsMenu}>
+            onMouseLeave={toggleUttarakhanInsightsMenu}
+          >
             <Link
-              className="text-gray-300 text-sm text-justify lg:text-2xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
-              href="/uttarakhand-insights">
+              className="mx-4 text-justify text-sm text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 lg:text-2xl"
+              href="/uttarakhand-insights"
+            >
               Insights
             </Link>
             {isUttrakhandInsights && (
-              <div className="absolute bg-tfp-blue-200 w-fit backdrop-blur-lg p-2 pl-4 px-5 rounded-md mx-auto right-0 left-0 top-full">
+              <div className="absolute left-0 right-0 top-full mx-auto w-fit rounded-md bg-tfp-blue-200 p-2 px-5 pl-4 backdrop-blur-lg">
                 {UttarakhandInsights.map((item) => (
                   <Link
                     key={item.id}
                     href={item.link}
-                    className="block mb-2 w-96 text-lg text-tfp-black-100 transition-colors duration-300 ease-in-out text-gray-300 hover:text-tfp-gold-300">
+                    className="text-tfp-black-100 mb-2 block w-96 text-lg text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
+                  >
                     {item.title}
                   </Link>
                 ))}
@@ -143,19 +154,22 @@ const Navbar = () => {
           <div
             className="relative"
             onMouseEnter={toggleVoiceOf4thMenu}
-            onMouseLeave={toggleVoiceOf4thMenu}>
+            onMouseLeave={toggleVoiceOf4thMenu}
+          >
             <Link
               href="/voice-of-fourth"
-              className="mx-4 text-sm text-justify lg:text-2xl text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 rounded-lg">
+              className="mx-4 rounded-lg text-justify text-sm text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 lg:text-2xl"
+            >
               Raibar
             </Link>
             {isOpenVoiceOf4th && (
-              <div className="absolute bg-tfp-blue-200 backdrop-blur-lg p-2 pl-4 px-5 rounded-md w-full mx-auto right-0 left-0 top-full">
+              <div className="absolute left-0 right-0 top-full mx-auto w-full rounded-md bg-tfp-blue-200 p-2 px-5 pl-4 backdrop-blur-lg">
                 {VoiceOf4th.map((item) => (
                   <Link
                     key={item.id}
                     href={item.link}
-                    className="block mb-2 text-md text-tfp-black-100 transition-colors duration-300 ease-in-out text-gray-300 hover:text-tfp-gold-300">
+                    className="text-md text-tfp-black-100 mb-2 block text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
+                  >
                     {item.title}
                   </Link>
                 ))}
@@ -164,23 +178,26 @@ const Navbar = () => {
           </div>
           {/* End of modified "About" dropdown section */}
           <Link
-            className="text-gray-300 text-sm text-justify lg:text-2xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
-            href="/careers">
+            className="mx-4 text-justify text-sm text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 lg:text-2xl"
+            href="/careers"
+          >
             Careers
           </Link>
           <Link
-            className="text-gray-300 text-sm text-justify lg:text-2xl mx-4 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
-            href="/contact-us">
+            className="mx-4 text-justify text-sm text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 lg:text-2xl"
+            href="/contact-us"
+          >
             Contact Us
           </Link>
         </div>
         <div
           className={`fixed inset-0 transform ${
-            isMenuVisible ? 'translate-x-0' : '-translate-x-full'
-          } transition-transform duration-300 ease-in-out z-50 h-screen bg-white w-1/3`}>
+            isMenuVisible ? "translate-x-0" : "-translate-x-full"
+          } z-50 h-screen w-1/3 bg-white transition-transform duration-300 ease-in-out`}
+        >
           {/* Menu content goes here */}
-          <div className="flex justify-around">
-            hello
+          <div className="flex justify-around py-96 text-2xl text-tfp-gold-300">
+            Coming Soon
             <button onClick={toggleSlidingMenu}>X</button>
           </div>
         </div>
@@ -188,7 +205,8 @@ const Navbar = () => {
           <div className="flex">
             <button
               onClick={toggleMenu}
-              className="block text-3xl text-[#F4E697] font-bold">
+              className="block text-3xl font-bold text-[#F4E697]"
+            >
               <Menu />
             </button>
             <Link href="/" className="mx-10">
@@ -201,40 +219,47 @@ const Navbar = () => {
             </Link>
           </div>
           {isOpen && (
-            <div className="md:hidden py-2">
+            <div className="py-2 md:hidden">
               <Link
                 href="/capabilities"
-                className="block text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
+                className="block py-2 text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
+              >
                 Capabilities
               </Link>
               <Link
                 href="/about"
-                className="block text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
+                className="block py-2 text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
+              >
                 About Us
               </Link>
               <Link
                 href="/nativesofuk"
-                className="block mb-2 text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
+                className="mb-2 block py-2 text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
+              >
                 Natives of UK
               </Link>
               <Link
                 href="/uktoday"
-                className="block mb-2 text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
+                className="mb-2 block py-2 text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
+              >
                 UK Today
               </Link>
               <Link
                 href="/voice-of-fourth"
-                className="block text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
+                className="block py-2 text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
+              >
                 Raibar
               </Link>
               <Link
                 href="/careers"
-                className="block text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
+                className="block py-2 text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
+              >
                 Careers
               </Link>
               <Link
                 href="/contact-us"
-                className="block text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300 py-2">
+                className="block py-2 text-gray-300 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
+              >
                 Contact
               </Link>
             </div>
