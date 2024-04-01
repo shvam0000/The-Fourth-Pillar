@@ -3,6 +3,7 @@ import { IM_Fell_Great_Primer } from 'next/font/google';
 import Link from 'next/link';
 import Image from 'next/image';
 import { IoCloseSharp } from 'react-icons/io5';
+import { RiArrowDropDownLine } from 'react-icons/ri';
 
 import {
   Capabilities,
@@ -27,6 +28,11 @@ const Navbar = () => {
   const [isAboutUs, setIsAboutUs] = useState<boolean>(false);
   const [isUttrakhandInsights, setIsUttrakhandInsights] =
     useState<boolean>(false);
+  const [showMenu, setShowMenu] = useState<boolean>(false);
+
+  const togglesubmenu = () => {
+    setShowMenu(!showMenu);
+  };
 
   const toggleAboutUsMenu = () => {
     setIsAboutUs(!isAboutUs);
@@ -189,32 +195,50 @@ const Navbar = () => {
             <div>
               <Link
                 href="/capabilities"
-                className="block py-2 transition-colors duration-300 ease-in-out hover:text-gray-300">
+                className="block py-2 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300">
                 Services
               </Link>
               <Link
                 href="/about"
-                className="block py-2  transition-colors duration-300 ease-in-out hover:text-gray-300">
+                className="block py-2  transition-colors duration-300 ease-in-out hover:text-tfp-gold-300">
                 About Us
               </Link>
               <Link
                 href="/uttarakhand-insights"
-                className="mb-2 block py-2 transition-colors duration-300 ease-in-out hover:text-gray-300">
-                Insights
+                className="mb-2 block py-2 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
+                onMouseEnter={togglesubmenu}
+                onMouseLeave={toggleMenu}>
+                <div className="flex items-center">
+                  <span>Insights</span>
+                  <span className={showMenu ? 'rotate-180' : ''}>
+                    <RiArrowDropDownLine />
+                  </span>
+                </div>
               </Link>
+              {showMenu && (
+                <div className="block bg-tfp-blue-200 py-2 px-3 rounded-lg text-lg">
+                  {UttarakhandInsights.map((item) => (
+                    <div
+                      key={item.id}
+                      className="block py-1  hover:text-tfp-gold-300">
+                      <Link href={item.link}>{item.title}</Link>
+                    </div>
+                  ))}
+                </div>
+              )}
               <Link
                 href="/voice-of-fourth"
-                className="block py-2  transition-colors duration-300 ease-in-out hover:text-gray-300">
+                className="block py-2  transition-colors duration-300 ease-in-out hover:text-tfp-gold-300">
                 Raibar
               </Link>
               <Link
                 href="/careers"
-                className="block py-2 transition-colors duration-300 ease-in-out hover:text-gray-300">
+                className="block py-2 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300">
                 Careers
               </Link>
               <Link
                 href="/contact-us"
-                className="block py-2 transition-colors duration-300 ease-in-out hover:text-gray-300">
+                className="block py-2 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300">
                 Contact Us
               </Link>
             </div>
