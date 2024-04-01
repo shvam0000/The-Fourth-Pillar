@@ -178,43 +178,43 @@ const Navbar = () => {
         <div
           className={`fixed inset-0 transform ${
             isMenuVisible ? 'translate-x-0' : '-translate-x-full'
-          } z-50 h-screen w-1/3 bg-tfp-gold-200 transition-transform duration-300 ease-in-out`}>
+          } z-50 h-screen w-1/3 bg-gradient-to-b from-tfp-blue-100 via-tfp-blue-400 to-tfp-blue-300 transition-transform duration-300 ease-in-out`}>
           {/* Menu content goes here */}
           <div
             onClick={toggleSlidingMenu}
-            className="absolute right-10 top-10 text-2xl text-tfp-blue-100 transform translate hover:scale-125 ease-in-out duration-300 cursor-pointer">
+            className="absolute right-10 top-10 text-2xl text-tfp-gold-100 transform translate hover:scale-125 ease-in-out duration-300 cursor-pointer">
             <IoCloseSharp />
           </div>
-          <div className="flex px-10 text-tfp-blue-100 py-16 text-2xl">
+          <div className="flex px-10 text-gray-300 py-16 text-2xl">
             <div>
               <Link
                 href="/capabilities"
-                className="block py-2 transition-colors duration-300 ease-in-out hover:text-tfp-white-100">
+                className="block py-2 transition-colors duration-300 ease-in-out hover:text-gray-300">
                 Services
               </Link>
               <Link
                 href="/about"
-                className="block py-2  transition-colors duration-300 ease-in-out hover:text-tfp-white-100">
+                className="block py-2  transition-colors duration-300 ease-in-out hover:text-gray-300">
                 About Us
               </Link>
               <Link
                 href="/uttarakhand-insights"
-                className="mb-2 block py-2 transition-colors duration-300 ease-in-out hover:text-tfp-white-100">
+                className="mb-2 block py-2 transition-colors duration-300 ease-in-out hover:text-gray-300">
                 Insights
               </Link>
               <Link
                 href="/voice-of-fourth"
-                className="block py-2  transition-colors duration-300 ease-in-out hover:text-tfp-white-100">
+                className="block py-2  transition-colors duration-300 ease-in-out hover:text-gray-300">
                 Raibar
               </Link>
               <Link
                 href="/careers"
-                className="block py-2 transition-colors duration-300 ease-in-out hover:text-tfp-white-100">
+                className="block py-2 transition-colors duration-300 ease-in-out hover:text-gray-300">
                 Careers
               </Link>
               <Link
                 href="/contact-us"
-                className="block py-2 transition-colors duration-300 ease-in-out hover:text-tfp-white-100">
+                className="block py-2 transition-colors duration-300 ease-in-out hover:text-gray-300">
                 Contact Us
               </Link>
             </div>
