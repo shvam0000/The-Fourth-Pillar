@@ -28,10 +28,25 @@ const Navbar = () => {
   const [isAboutUs, setIsAboutUs] = useState<boolean>(false);
   const [isUttrakhandInsights, setIsUttrakhandInsights] =
     useState<boolean>(false);
-  const [showMenu, setShowMenu] = useState<boolean>(false);
+  const [showInsightsMenu, setShowInsightsMenu] = useState<boolean>(false);
+  const [showAboutUsMenu, setShowAboutUsMenu] = useState<boolean>(false);
+  const [showServicesMenu, setShowServicesMenu] = useState<boolean>(false);
+  const [showRaibarMenu, setShowRaibarMenu] = useState<boolean>(false);
 
-  const togglesubmenu = () => {
-    setShowMenu(!showMenu);
+  const toggleSideInsights = () => {
+    setShowInsightsMenu(!showInsightsMenu);
+  };
+
+  const toggleAboutUs = () => {
+    setShowAboutUsMenu(!showAboutUsMenu);
+  };
+
+  const toggleServicesMenu = () => {
+    setShowServicesMenu(!showServicesMenu);
+  };
+
+  const toggleRaibarMenu = () => {
+    setShowRaibarMenu(!showRaibarMenu);
   };
 
   const toggleAboutUsMenu = () => {
@@ -195,27 +210,65 @@ const Navbar = () => {
             <div>
               <Link
                 href="/capabilities"
-                className="block py-2 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300">
-                Services
-              </Link>
-              <Link
-                href="/about"
-                className="block py-2  transition-colors duration-300 ease-in-out hover:text-tfp-gold-300">
-                About Us
-              </Link>
-              <Link
-                href="/uttarakhand-insights"
                 className="mb-2 block py-2 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
-                onMouseEnter={togglesubmenu}
-                onMouseLeave={toggleMenu}>
+                onMouseEnter={toggleServicesMenu}
+                onMouseLeave={toggleServicesMenu}>
                 <div className="flex items-center">
-                  <span>Insights</span>
-                  <span className={showMenu ? 'rotate-180' : ''}>
+                  <span>Services</span>
+                  <span className={showInsightsMenu ? 'rotate-180' : ''}>
                     <RiArrowDropDownLine />
                   </span>
                 </div>
               </Link>
-              {showMenu && (
+              {showServicesMenu && (
+                <div className="block bg-tfp-blue-200 py-2 px-3 rounded-lg text-lg">
+                  {Capabilities.map((item) => (
+                    <div
+                      key={item.id}
+                      className="block py-1  hover:text-tfp-gold-300">
+                      <Link href={item.link}>{item.title}</Link>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              <Link
+                href="/about"
+                className="mb-2 block py-2 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
+                onMouseEnter={toggleAboutUs}
+                onMouseLeave={toggleAboutUs}>
+                <div className="flex items-center">
+                  <span>About us</span>
+                  <span className={showAboutUsMenu ? 'rotate-180' : ''}>
+                    <RiArrowDropDownLine />
+                  </span>
+                </div>
+              </Link>
+              {showAboutUsMenu && (
+                <div className="block bg-tfp-blue-200 py-2 px-3 rounded-lg text-lg">
+                  {AboutUs.map((item) => (
+                    <div
+                      key={item.id}
+                      className="block py-1  hover:text-tfp-gold-300">
+                      <Link href={item.link}>{item.title}</Link>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              <Link
+                href="/uttarakhand-insights"
+                className="mb-2 block py-2 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
+                onMouseEnter={toggleSideInsights}
+                onMouseLeave={toggleSideInsights}>
+                <div className="flex items-center">
+                  <span>Insights</span>
+                  <span className={showInsightsMenu ? 'rotate-180' : ''}>
+                    <RiArrowDropDownLine />
+                  </span>
+                </div>
+              </Link>
+              {showInsightsMenu && (
                 <div className="block bg-tfp-blue-200 py-2 px-3 rounded-lg text-lg">
                   {UttarakhandInsights.map((item) => (
                     <div
@@ -228,9 +281,27 @@ const Navbar = () => {
               )}
               <Link
                 href="/voice-of-fourth"
-                className="block py-2  transition-colors duration-300 ease-in-out hover:text-tfp-gold-300">
-                Raibar
+                className="mb-2 block py-2 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300"
+                onMouseEnter={toggleRaibarMenu}
+                onMouseLeave={toggleRaibarMenu}>
+                <div className="flex items-center">
+                  <span>Raibar</span>
+                  <span className={showRaibarMenu ? 'rotate-180' : ''}>
+                    <RiArrowDropDownLine />
+                  </span>
+                </div>
               </Link>
+              {showRaibarMenu && (
+                <div className="block bg-tfp-blue-200 py-2 px-3 rounded-lg text-lg">
+                  {VoiceOf4th.map((item) => (
+                    <div
+                      key={item.id}
+                      className="block py-1  hover:text-tfp-gold-300">
+                      <Link href={item.link}>{item.title}</Link>
+                    </div>
+                  ))}
+                </div>
+              )}
               <Link
                 href="/careers"
                 className="block py-2 transition-colors duration-300 ease-in-out hover:text-tfp-gold-300">
